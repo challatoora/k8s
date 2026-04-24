@@ -4,9 +4,9 @@ metadata:
   name: attaching-pod-nginx
 spec:
   containers:
-    - name: nginx
-      image: nginx
-      envFrom:
-      - configMapRef:
-        name: nginx-config
+  - name: nginx
+    image: nginx
+    envFrom:
+    - configMapRef:
+      name: nginx-config
     
