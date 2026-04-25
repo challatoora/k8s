@@ -22,8 +22,7 @@ spec:
         project: roboshop
         tier: frontend
         purpose: replicaset
-
-  spec:
-    containers:
-    - name: nginx
-      image: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
