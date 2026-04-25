@@ -5,16 +5,16 @@ metadata:
   labels:
     project: roboshop
     tier: frontend
-    purpose: replicaset
+    purpose: rs-demo
 
 spec:
   # modify replicas according to your case
   replicas: 3
   selector:
     matchLabels:
-    project: roboshop
-    tier: frontend
-    purpose: replicaset
+      project: roboshop
+      tier: frontend
+      purpose: replicaset
     
   template:
     metadata:
@@ -22,3 +22,8 @@ spec:
         project: roboshop
         tier: frontend
         purpose: replicaset
+
+  spec:
+    containers:
+    - name: nginx
+      image: nginx
