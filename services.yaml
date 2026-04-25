@@ -5,7 +5,7 @@ metadata:
   namespace: loreal
 spec:
   selector:
-    labels:
+    #lables
       project_name: loreal
       dev: Ashokreddy
       Devops: murali
