@@ -3,6 +3,11 @@ kind: Pod
 metadata:
   name: nginx
   namespace: loreal
+labels:
+    project_name: loreal
+    dev: Ashokreddy
+    Devops: murali
+    env: prod
 spec:
   containers:
     - name: nginx
