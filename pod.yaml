@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: nginx
-  namespace: loreal
+  #namespace: loreal
   labels:
     project_name: loreal
     dev: Ashokreddy
