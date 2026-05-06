@@ -4,10 +4,9 @@ metadata:
   name: nginx
   #namespace: loreal
   labels:
-    project_name: loreal
-    dev: Ashokreddy
-    Devops: murali
-    env: prod
+    project: roboshop
+    tier: frontend
+    env: dev
 spec:
   containers:
     - name: nginx
