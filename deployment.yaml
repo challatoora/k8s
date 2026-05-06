@@ -5,24 +5,43 @@ metadata:
   labels:
     project: roboshop
     tier: frontend
-    purpose: rs-demo
+    env: dev
+    #purpose: rs-demo
 
 spec:
   # modify replicas according to your case
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       project: roboshop
       tier: frontend
-      purpose: replicaset
+      env: dev
+      #purpose: replicaset
     
   template:
     metadata:
       labels:
         project: roboshop
         tier: frontend
-        purpose: replicaset
+        env: dev
+        #purpose: replicaset
     spec:
       containers:
       - name: nginx
         image: nginx:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+#  namespace: loreal
+spec:
+  selector:
+    #lables
+      project: roboshop
+      tier: frontend
+     # purpose: replicaset
+  ports:
+  - protocol: TCP
+    port: 80 # service port
+    targetPort: 80 # container port
