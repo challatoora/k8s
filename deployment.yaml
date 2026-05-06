@@ -45,3 +45,21 @@ spec:
   - protocol: TCP
     port: 80 # service port
     targetPort: 80 # container port
+---
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-headless
+#  namespace: loreal
+spec:
+  clusterIP: None
+  selector:
+    #lables
+      project: roboshop
+      tier: frontend
+     # purpose: replicaset
+  ports:
+  - protocol: TCP
+    port: 80 # service port
+    targetPort: 80 # container port
